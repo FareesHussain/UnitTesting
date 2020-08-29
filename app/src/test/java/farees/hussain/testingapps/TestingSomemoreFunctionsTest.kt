@@ -21,7 +21,7 @@ class TestingSomemoreFunctionsTest {
     @Test
     fun `fib of 4 returns 2`() {
         var res = fib(4)
-        assertThat(res).isEqualTo(2)
+        assertThat(res).isEqualTo(3)
     }
 
     @Test
@@ -34,4 +34,12 @@ class TestingSomemoreFunctionsTest {
         var res = checkBraces("{{{}}}()")
         assertThat(res).isTrue()
     }
+
+    @Test
+    fun `braces check for )(`() {
+        var res = checkBraces(")(")
+        assertThat(res).isFalse()
+    }
+
+
 }
